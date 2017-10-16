@@ -1,6 +1,7 @@
 var alerted =false;// used to remove multiple alert
 var stclick=false;// stores value to check player clicked start or not
 var stime;// stores value when S is clicked
+var mousecur=false;// stores value of cursor traversing from inside or outside
 
 
 //start function is invoked when S is clicked
@@ -31,13 +32,26 @@ function end(){
 		alert("Yeah!!, You completed in:"+ tgaps+"s");
 
 	}
+	else if(stclick)
+		alert("No cheating, You moved cursor from outside maze")
+
+		else
+
+			alert("Please, Don't Cheat!!")
 
 }
 
-
-
-
+/*
+// Use this when color change required for first boundary only
 function changecolor(){
+	document.getElementById("boundary1").style.backgroundColor="red";
+	alert("you touched the boundary please try again!!!!");
+}
+
+*/
+// changecolor function to change color of all boundary to red
+function changecolor(){
+stclick=false;
 
 var x= document.getElementsByClassName("boundary");
 var i;
@@ -52,10 +66,6 @@ window.alert("Sorry!! you lost :( ");
 }
 
 
-
-/*
-function changecolor(){
-	document.getElementById("boundary1").style.backgroundColor="red";
-	alert("you touched the boundary try again");
+function outofdiv(){
+	mousecur=false;
 }
-*/
