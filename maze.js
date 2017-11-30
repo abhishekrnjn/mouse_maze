@@ -4,7 +4,7 @@ var stime;// stores value when S is clicked
 var mousecur=false;// stores value of cursor traversing from inside or outside
 
 
-//start function is invoked when S is clicked
+//start function invoked when S is clicked
 function start(){
 	mousecur=true;
 	stclick=true;
